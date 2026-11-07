@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-  <!-- TEST MODE: The XML route is intentionally empty.
-       Add complete video:video entries only after choosing the real final
-       site hostname and canonical page URLs.
-       DO NOT submit this test sitemap to Google Search Console. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>https://video.top5reviews.online/videos/horse-gelatin-trick/</loc>
+    <video:video>
+      <video:thumbnail_loc>https://media.atomicatmedia.net/u/qR7YS6eFtJQlEL8J3acs4S3VXOu2/Pictures/gipt4/EqEyDF1453443.png</video:thumbnail_loc>
+      <video:title>Horse Gelatin Trick Video: 33-Second Clip and Context</video:title>
+      <video:description>Watch this 33-second Horse Gelatin Trick video and learn what to check before following an online gelatin recipe trend.</video:description>
+      <video:player_loc>https://scripts.converteai.net/37e59ea7-790a-4abd-8e35-d4b2d1764b69/players/6ad628da5e2d0c3e0618d32a/v4/embed.html</video:player_loc>
+      <video:duration>33</video:duration>
+      <video:publication_date>2026-10-19</video:publication_date>
+    </video:video>
+  </url>
 </urlset>

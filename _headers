@@ -1,3 +1,10 @@
-/*
+# The lab homepage stays out of Google search.
+/
   X-Robots-Tag: noindex, nofollow
+
+# Alternate workers.dev preview hosts are not canonical.
+https://:worker.:subdomain.workers.dev/*
+  X-Robots-Tag: noindex
+
+/*
   X-Content-Type-Options: nosniff

@@ -1,22 +1,23 @@
-# Video SEO Lab — Cloudflare Pages
+# Video SEO Lab — Cloudflare
 
-Teste inicial de hospedagem estática. Site de teste, **não indexar**.
+## Public video page
+https://video.top5reviews.online/videos/horse-gelatin-trick/
 
-## Estrutura
+## Video Sitemap
+https://video.top5reviews.online/video-sitemap.xml
 
-- `index.html`: página inicial do laboratório.
-- `videos/horse-gelatin-trick/index.html`: página com player VTurb e CTA.
-- `video-sitemap.xml`: XML válido, vazio **de propósito** nesta fase.
-- `_headers`: cabeçalho `X-Robots-Tag: noindex, nofollow` para todas as rotas.
+## Robots
+https://video.top5reviews.online/robots.txt
 
-## Deploy com Cloudflare Pages
+## Architecture
+GitHub main branch -> Cloudflare static hosting -> custom subdomain.
+The root test homepage remains `noindex`. The Horse Gelatin video page is `index, follow` with a self-canonical and one VideoObject. `_headers` does not apply a global noindex. The `video-sitemap.xml` contains the matching single watch-page record.
 
-1. No painel Cloudflare, crie o projeto Pages integrado a este repositório.
-2. Branch de produção: `main`.
-3. Framework: `None`; build command: deixe vazio; output directory: `/` (raiz do projeto), conforme o campo do painel.
-4. Após o deploy, abra a home, `/videos/horse-gelatin-trick/` e `/video-sitemap.xml`.
-5. Verifique HTTP 200, vídeo e botão, e confirme que o XML é servido como XML.
+## Next step
+In Google Search Console, verify the property for `https://video.top5reviews.online/`, use URL inspection (Test Live URL) on the video page, check that the live page is indexable, and submit `video-sitemap.xml`. Monitor the Video Indexing report.
 
-**Não envie essas URLs ao Search Console:** o vídeo é um teste técnico de duplicação da página já publicada no domínio Atomicat. O sitemap está vazio. A versão real precisa de vídeo/página originais e URL canônica definitiva, antes de remover `noindex`.
+## Important duplicate-content warning
+The exact same VTurb video also appears on the existing Atomicat page: https://www.top5reviews.online/horse-gelatin-recipe-video-1. Its page and SEO were not changed. Google may treat these as duplicate video pages and select only one URL as canonical. Do not assume both will be indexed.
 
-O conteúdo da página é destinado a visitantes dos EUA e está em inglês. README técnico mantido em português.
+## Future updates
+When adding a new video, publish a dedicated watch page, then add one `<url>` entry to the same `video-sitemap.xml` with true values: watch page, thumbnail, title, description, VTurb embed player, duration, and initial publication date.
